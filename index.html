@@ -5,14 +5,51 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>KOO HYEMIN</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
+<head>
+	<title>KOO HYEMIN</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- 이미지 슬라이드 -->
+	<link rel="stylesheet" href="assets/css/slideshow.css">
+	<!-- 모달 적용 css -->
+	<link rel="stylesheet" href="assets/css/modal.css">
+	<style>
+		/* 임의의 영역 생성 */
+		.scroolBar { 
+			width: 100%;
+			height: 500px;
+			overflow-y: scroll;
+		}
+		.scroolBar::-webkit-scrollbar {
+			width: 10px;  /* 스크롤바의 너비 */
+		}
+		.scroolBar::-webkit-scrollbar-thumb {
+			height: 30%; /* 스크롤바의 길이 */
+			background: #B2CCFF; /* 스크롤바의 색상 */
+			
+			border-radius: 10px;
+		}
+		.scroolBar::-webkit-scrollbar-track {
+			background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+		}
+	</style>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#modal-open1").click(function(){
+			$("#popup1").css('display','flex').hide().fadeIn();
+		});
+		$("#close1").click(function(){
+			modalClose();
+		});
+		function modalClose(){
+			$("#popup1").fadeOut();
+		}
+	});
+</script>
+</head>
+<body class="is-preload">
 		<!-- Nav -->
 			<nav id="nav" style="background:#B2CCFF;">
 				<ul class="container">
@@ -38,7 +75,7 @@
 			                	<li class="wow fadeInLeft " data-wow-delay="1s"><span><img src="images/birth.png" style="vertical-align:middle; width:20px; height:20px;"> BIRTH</span><h3> 1998.10.23</h3></li>
 			                	<li class="wow fadeInLeft" data-wow-delay="1s"><span><img src="images/phone.png" style="vertical-align:middle; width:20px; height:20px;"> PHONE</span><h3>010 5670 9012</h3></li>
 			                	<li class="wow fadeInLeft" data-wow-delay="1s"><span><img src="images/email.png" style="vertical-align:middle; width:20px; height:20px;"> EMAIL</span><h3>kmys4007@naver.com</h3></li>
-		                        <li class="wow fadeInLeft" data-wow-delay="1s"><span class="social-icon icon brands fa-github"></span>GITHUB<h3><a href="https://github.com/Koohyemin" style="color:#6799FF; text-decoration: underline;">https://github.com/Koohyemin</a></h3></li>
+		                        <li class="wow fadeInLeft" data-wow-delay="1s"><span class="social-icon icon brands fa-github"></span>GITHUB<h3><a href="https://github.com/Koohyemin" style="color:#6799FF; text-decoration: underline;" target="_blank">https://github.com/Koohyemin</a></h3></li>
 		                        <li class="wow fadeInLeft" data-wow-delay="1s">한줄소개 추가 예정(취미, 다짐 등)</li>
 				            </ul>
 							<a href="#work" class="button scrolly" style="background:#B2CCFF;">Learn about what I do</a>
@@ -125,48 +162,47 @@
 				<div class="container">
 					<header>
 						<h2>Portfolio</h2> + 후에 상세설명 및 ERD 추가 예정
-						<h3>포트폴리오 사진 또는 제목 클릭 시, 해당 사이트로 이동합니다.</h3>
-						<h4><span class="social-icon icon brands fa-github" style="color:#4ABFD3;"></span> 아이콘 클릭 시, 해당 프로젝트 깃허브로 이동합니다.</h4>
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="http://3.38.213.210/blog/home/home.jsp" class="image featured"><img src="images/blog.png" alt="" /></a>
-								<h3><a href="http://3.38.213.210/blog/home/home.jsp">BLOG</a></h3>
-								<p>모델1 방식을 이용해 게시판, 갤러리, 방명록, PDF자료실 기능을 구현한 블로그 프로젝트<br>
-								<a href="http://3.38.213.210/blog/home/home.jsp" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> BLOG 바로가기</a><br>
-								<a href="#" style="color:#6799FF;"><img src="images/profiles.png" style="vertical-align:middle; width:20px; height:20px;"> BLOG 상세설명</a><br>
-								<a href="https://github.com/Koohyemin/blog" style="color:#6799FF; text-decoration: underline;"><span class="social-icon icon brands fa-github" style="color:black;"></span> BLOG 깃허브</a></p>
+								<div class="image featured"><img src="images/blog.png" alt="" /></div>
+								<h3><a href="http://3.38.213.210/blog/home/home.jsp" target="_blank">BLOG</a></h3>
+									<p>모델1 방식을 이용해 게시판, 갤러리, 방명록, PDF자료실 기능을 구현한 <br>블로그 프로젝트<br><br>
+											<a id="modal-open1" style="color:#6799FF; cursor: pointer;  text-decoration: none"><img src="images/profiles.png" style="vertical-align:middle; width:20px; height:20px;"> 상세설명</a> &nbsp;&nbsp;
+											<a href="http://3.38.213.210/blog/home/home.jsp" style="color:#6799FF; text-decoration: none" target="_blank"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> 바로가기</a>&nbsp;&nbsp;
+											<a href="https://github.com/Koohyemin/blog" style="color:#6799FF;  text-decoration: none" target="_blank"><span class="social-icon icon brands fa-github" style="color:black;"></span> 깃허브</a>
+									</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="http://3.38.213.210/sakila/home.jsp" class="image featured"><img src="images/sakila.png" alt="" style="width:380px;height:285px;"/></a>
-								<h3><a href="http://3.38.213.210/sakila/home.jsp">DVD지점 시스템 : SAKILA</a></h3>
+								<a href="http://3.38.213.210/sakila/home.jsp" class="image featured" target="_blank"><img src="images/sakila.png" alt="" style="width:380px;height:285px;" /></a>
+								<h3><a href="http://3.38.213.210/sakila/home.jsp" target="_blank">DVD지점 시스템 : SAKILA</a></h3>
 								<p>모델1 방식을 이용해 MYSQL 샘플 데이터베이스 사킬라를 사용하여 구현한 <br>DVD대여 및 관리 웹 프로젝트<br>
-								<a href="http://3.38.213.210/sakila/home.jsp" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> SAKILA 바로가기</a><br>
+								<a href="http://3.38.213.210/sakila/home.jsp" style="color:#6799FF;" target="_blank"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> SAKILA 바로가기</a><br>
 								<a href="#" style="color:#6799FF;"><img src="images/profiles.png" style="vertical-align:middle; width:20px; height:20px;"> SAKILA 상세설명</a><br>
-								<a href="https://github.com/Koohyemin/sakila" style="color:#6799FF;"><span class="social-icon icon brands fa-github" style="color:black;"></span> SAKILA 깃허브</a></p>
+								<a href="https://github.com/Koohyemin/sakila" style="color:#6799FF;" target="_blank"><span class="social-icon icon brands fa-github" style="color:black;"></span> SAKILA 깃허브</a></p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="http://3.38.213.210/cashbook/CashbookListByMonthController" class="image featured"><img src="images/cashbook.png" alt="" style="width:380px;height:285px;"/></a>
-								<h3><a href="http://3.38.213.210/cashbook/CashbookListByMonthController">가계부 : CASH BOOK</a></h3>
+								<a href="http://3.38.213.210/cashbook/CashbookListByMonthController" target="_blank" class="image featured"><img src="images/cashbook.png" alt="" style="width:380px;height:285px;"/></a>
+								<h3><a href="http://3.38.213.210/cashbook/CashbookListByMonthController" target="_blank">가계부 : CASH BOOK</a></h3>
 								<p>모델2(MVC) 방식을 이용해 회원별로 해시태그를 사용하여 가계부를 작성할 수 있는 기능을 구현한 웹 프로젝트<br>
-								<a href="http://3.38.213.210/cashbook/CashbookListByMonthController" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> CASHBOOK 바로가기</a><br>
+								<a href="http://3.38.213.210/cashbook/CashbookListByMonthController" target="_blank" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> CASHBOOK 바로가기</a><br>
 								<a href="#" style="color:#6799FF;"><img src="images/profiles.png" style="vertical-align:middle; width:20px; height:20px;"> CASHBOOK 상세설명</a><br>
-								<a href="https://github.com/Koohyemin/cashbook.git" style="color:#6799FF;"><span class="social-icon icon brands fa-github" style="color:black;"></span> CASHBOOK 깃허브</a></p>
+								<a href="https://github.com/Koohyemin/cashbook.git" target="_blank" style="color:#6799FF;"><span class="social-icon icon brands fa-github" style="color:black;"></span> CASHBOOK 깃허브</a></p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="http://3.38.213.210/ComputerShoppingMall/IndexController" class="image featured"><img src="images/computer.png" alt="" style="width:380px;height:285px;"/></a>
-								<h3><a href="http://3.38.213.210/ComputerShoppingMall/IndexController">SHOPPING MALL</a></h3>
+								<a href="http://3.38.213.210/ComputerShoppingMall/IndexController" class="image featured" target="_blank"><img src="images/computer.png" alt="" style="width:380px;height:285px;"/></a>
+								<h3><a href="http://3.38.213.210/ComputerShoppingMall/IndexController" target="_blank">SHOPPING MALL</a></h3>
 								<p>모델2(MVC)방식을 이용해 관리자, 회원, 비회원별로 이용권한을 다르게 준 조립식 컴퓨터 쇼핑몰을 구현한 팀 프로젝트<br>
-								<a href="http://3.38.213.210/cashbook/CashbookListByMonthController" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> SHOPPINGMALL 바로가기</a><br>
+								<a href="http://3.38.213.210/ComputerShoppingMall/IndexController" target="_blank" style="color:#6799FF;"><img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> SHOPPINGMALL 바로가기</a><br>
 								<a href="#" style="color:#6799FF;"><img src="images/profiles.png" style="vertical-align:middle; width:20px; height:20px;"> SHOPPINGMALL 상세설명</a><br>
-								<a href="https://github.com/Computer-ShoppingMall-Project/Computer-ShoppingMall" style="color:#6799FF;"><span class="social-icon icon brands fa-github" style="color:black;"></span> SHOPPING MALL 깃허브</a></p>
+								<a href="https://github.com/Computer-ShoppingMall-Project/Computer-ShoppingMall" target="_blank" style="color:#6799FF;"><span class="social-icon icon brands fa-github" style="color:black;"></span> SHOPPING MALL 깃허브</a></p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -174,7 +210,7 @@
 								<a href="#" class="image featured"><img src="images/레드팀.jpg" alt="" style="width:380px;height:285px;"/></a>
 								<h3><a href="#"> FINAL PROJECT</a></h3>
 								<p>혜민<br>혜민<br>혜민<br>
-									<a href="https://github.com/Koohyemin" class="social-icon icon brands fa-github"> GITHUB</a>
+									<a href="https://github.com/Koohyemin" target="_blank" class="social-icon icon brands fa-github"> GITHUB</a>
 								</p>
 							</article>
 						</div>
@@ -183,7 +219,7 @@
 								<a href="#" class="image featured"><img src="images/레드팀.jpg" alt="" style="width:380px;height:285px;"/></a>
 								<h3><a href="#">PROJECT</a></h3>
 								<p>혜민<br>혜민<br>혜민<br>
-									<a href="https://github.com/Koohyemin" class="social-icon icon brands fa-github"> GITHUB</a>
+									<a href="https://github.com/Koohyemin" target="_blank" class="social-icon icon brands fa-github"> GITHUB</a>
 								</p>
 							</article>
 						</div>
@@ -207,5 +243,126 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
+<div class="popup-wrap" id="popup1">
+	<div class="popup" style="width: 1000px;">
+		<div class="popup-body scroolBar" style="max-height: 500px;">
+			<div class="body-content">
+				<div class="body-contentbox" style="width: 100%;">
+					<div class="CSSgal">
+					  <!-- Don't wrap targets in parent -->
+						<s id="s1"></s> 
+						<s id="s2"></s>
+						<s id="s3"></s>
+						<s id="s4"></s>
+						<s id="s5"></s> 
+						<s id="s6"></s>
+						<s id="s7"></s>
+						<s id="s8"></s>
+					
+						<div class="slider">
+							<div style="background-image:url('images/blog/home.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/boardList.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/insert.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/boardOne.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/photoList.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/pdfList.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+							<div style="background-image:url('images/blog/guestbook.png'); background-size:contain;">
+								<h2></h2>
+								<p></p>
+							</div>
+						</div>
+						<div class="prevNext">
+							<div><a href="#s7"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s2"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s1"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s3"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s2"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s4"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s3"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s5"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s4"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s6"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s5"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s7"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+							<div><a href="#s6"><img src="images/previous.png" style="height:30px; width:30px; vertical-align:middle;"></a><a href="#s1"><img src="images/next.png" style="height:30px; width:30px; vertical-align:middle;"></a></div>
+						</div>
+						<div class="bullets">
+							<a href="#s1"></a>
+							<a href="#s2"></a>
+							<a href="#s3"></a>
+							<a href="#s4"></a>
+							<a href="#s5"></a>
+							<a href="#s6"></a>
+							<a href="#s7"></a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<br><br>
+					<img src="images/link.png" style="vertical-align:middle; width:20px; height:20px;"> 웹사이트 : <a href="http://3.38.213.210/blog/home/home.jsp">http://3.38.213.210/blog/home/home.jsp</a> &nbsp;&nbsp;
+					<br><br><span class="social-icon icon brands fa-github"></span> 깃허브 : <a href="https://github.com/Koohyemin/blog">https://github.com/Koohyemin/blog</a><br><br>
+					<span style="font-weight: bolder;">- 기간</span> 2022.03.03 - 2022.04.04<br><br>
+					<span style="font-weight: bolder;">- 소개</span> 모델1 방식을 이용해 게시판, 사진 게시판(사진 업로드, 삭제), 방명록, PDF자료실(pdf 업로드, 삭제)를 CRUD 기능을 통해<br> 구현한 블로그 프로젝트<br><br>
+					<div style="font-weight: bolder; ">- 개발 환경</div><br>
+					<table style="width:270px">
+						<tr>
+							<th style="float:left;">OS</th>
+							<td>Window10</td>
+						</tr>
+						<tr>
+							<th style="float:left;">Language</th>
+							<td>JAVA, HTML, CSS</td>
+						</tr>
+						<tr>
+							<th style="float:left;">API</th>
+							<td>SummerNote</td>
+						</tr>
+						<tr>
+							<th style="float:left;">Database</th>
+							<td>MariaDB 10.2</td>
+						</tr>
+						<tr>
+							<th style="float:left;">Server</th>
+							<td>Apache Tomcat 9.0</td>
+						</tr>
+						<tr>
+							<th style="float:left;">IDE</th>
+							<td>Eclipse</td>
+						</tr>
+					</table>
+					<div style="font-weight: bolder;">- 실행 환경</div> <br>
+					<table style="width:270px">
+						<tr>
+							<th style="float:left;">Platform</th>
+							<td>AWS Lightsail</td>
+						</tr>
+						<tr>
+							<th style="float:left;">OS</th>
+							<td>Ubuntu 18.04</td>
+						</tr>
+						<tr>
+							<th style="float:left;">Setting</th>
+							<td>Java11, Tomcat9, MariaDB</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="popup-foot">
+			<a class="pop-btn close" id="close1" style="text-decoration: none;">창 닫기</a>
+		</div>
+	</div>
+</div>
+</body>
