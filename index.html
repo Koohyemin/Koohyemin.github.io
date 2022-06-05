@@ -6,6 +6,20 @@
 -->
 <html>
 <head>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#modal-open1").click(function(){
+			$("#popup1").css('display','flex').hide().fadeIn();
+		});
+		$("#close1").click(function(){
+			modalClose();
+		});
+		function modalClose(){
+			$("#popup1").fadeOut();
+		}
+	});
+</script>
 	<title>KOO HYEMIN</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -34,20 +48,6 @@
 			background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
 		}
 	</style>
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		$("#modal-open1").click(function(){
-			$("#popup1").css('display','flex').hide().fadeIn();
-		});
-		$("#close1").click(function(){
-			modalClose();
-		});
-		function modalClose(){
-			$("#popup1").fadeOut();
-		}
-	});
-</script>
 </head>
 <body class="is-preload">
 		<!-- Nav -->
