@@ -6,25 +6,25 @@
 -->
 <html>
 <head>
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		$("#modal-open1").click(function(){
-			$("#popup1").css('display','flex').hide().fadeIn();
-		});
-		$("#close1").click(function(){
-			modalClose();
-		});
-		function modalClose(){
-			$("#popup1").fadeOut();
-		}
-	});
-</script>
 	<title>KOO HYEMIN</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!-- 모달 적용 css -->
 	<link rel="stylesheet" href="assets/css/modal.css">
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#modal-open1").click(function(){
+				$("#popup1").css('display','flex').hide().fadeIn();
+			});
+			$("#close1").click(function(){
+				modalClose();
+			});
+			function modalClose(){
+				$("#popup1").fadeOut();
+			}
+		});
+	</script>
 	<!-- 템플릿 css -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!-- 이미지 슬라이드 -->
