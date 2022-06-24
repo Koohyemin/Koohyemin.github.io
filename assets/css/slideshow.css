@@ -147,7 +147,17 @@ http://stackoverflow.com/a/34696029/383904
 #d8:target ~ .bullets >*:nth-child(8) {background:#759eed;}
 #d9:target ~ .bullets >*:nth-child(9) {background:#759eed;}
 #d10:target ~ .bullets >*:nth-child(10) {background:#759eed;}
-
+/* lms */
+#e1:target ~ .bullets >*:nth-child(1) {background:#759eed;}
+#e2:target ~ .bullets >*:nth-child(2) {background:#759eed;}
+#e3:target ~ .bullets >*:nth-child(3) {background:#759eed;}
+#e4:target ~ .bullets >*:nth-child(4) {background:#759eed;}
+#e5:target ~ .bullets >*:nth-child(5) {background:#759eed;}
+#e6:target ~ .bullets >*:nth-child(6) {background:#759eed;}
+#e7:target ~ .bullets >*:nth-child(7) {background:#759eed;}
+#e8:target ~ .bullets >*:nth-child(8) {background:#759eed;}
+#e9:target ~ .bullets >*:nth-child(9) {background:#759eed;}
+#e10:target ~ .bullets >*:nth-child(10) {background:#759eed;}
 /* More slides? Add here more rules */
 
 /* PREV/NEXT CONTAINERS VISIBILITY */
@@ -199,6 +209,17 @@ http://stackoverflow.com/a/34696029/383904
 #d8:target ~ .prevNext >*:nth-child(8) {visibility: visible;}
 #d9:target ~ .prevNext >*:nth-child(9) {visibility: visible;}
 #d10:target ~ .prevNext >*:nth-child(10) {visibility: visible;}
+/* lms */
+#e1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#e2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#e3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#e4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+#e5:target ~ .prevNext >*:nth-child(5) {visibility: visible;}
+#e6:target ~ .prevNext >*:nth-child(6) {visibility: visible;}
+#e7:target ~ .prevNext >*:nth-child(7) {visibility: visible;}
+#e8:target ~ .prevNext >*:nth-child(8) {visibility: visible;}
+#e9:target ~ .prevNext >*:nth-child(9) {visibility: visible;}
+#e10:target ~ .prevNext >*:nth-child(10) {visibility: visible;}
 /* More slides? Add here more rules */
 
 /* SLIDER ANIMATION POSITIONS */
@@ -246,6 +267,17 @@ http://stackoverflow.com/a/34696029/383904
 #d8:target ~ .slider {transform: translateX(-700%); -webkit-transform: translateX(-700%);}
 #d9:target ~ .slider {transform: translateX(-800%); -webkit-transform: translateX(-800%);}
 #d10:target ~ .slider {transform: translateX(-900%); -webkit-transform: translateX(-900%);}
+/* lms */
+#e1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#e2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#e3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#e4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+#e5:target ~ .slider {transform: translateX(-400%); -webkit-transform: translateX(-400%);}
+#e6:target ~ .slider {transform: translateX(-500%); -webkit-transform: translateX(-500%);}
+#e7:target ~ .slider {transform: translateX(-600%); -webkit-transform: translateX(-600%);}
+#e8:target ~ .slider {transform: translateX(-700%); -webkit-transform: translateX(-700%);}
+#e9:target ~ .slider {transform: translateX(-800%); -webkit-transform: translateX(-800%);}
+#e10:target ~ .slider {transform: translateX(-900%); -webkit-transform: translateX(-900%);}
 /* More slides? Add here more rules */
 
 
